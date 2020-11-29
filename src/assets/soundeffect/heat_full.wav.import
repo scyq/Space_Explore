@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/heat_full.wav-4303d16b7293077aa5dbb7e03a50075e.sample"
+
+[deps]
+
+source_file="res://src/assets/soundeffect/heat_full.wav"
+dest_files=[ "res://.import/heat_full.wav-4303d16b7293077aa5dbb7e03a50075e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
