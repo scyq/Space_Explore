@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Game-off"
-run/main_scene="res://src/nodes/ClassicGame.tscn"
+run/main_scene="res://src/nodes/MainGame.tscn"
 config/icon="res://icon.png"
 
 [display]

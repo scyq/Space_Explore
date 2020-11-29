@@ -51,7 +51,8 @@ func get_input():
 	if Input.is_action_pressed("attack"):
 		shoot()
 	elif !Input.is_action_pressed("attack"):
-		heat -= 1
+		if (heat > 0):
+			heat -= 1
 		emit_signal("heat_change", heat)
 		
 
@@ -65,19 +66,13 @@ func _physics_process(delta):
 		$Push.emitting = false
 	rotation += rotation_dir * rotation_speed * delta
 	velocity = move_and_slide(velocity)
-	if position.x < 0:
-		position.x = screen_size.x
-	elif position.x > screen_size.x:
-		position.x = 0
-	if position.y < 0:
-		position.y = screen_size.y
-	elif position.y > screen_size.y:
-		position.y = 0
-
+	
+	# TO DO 
+	# Map Limit
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#$Camera2D.position = position
 	pass
-	

@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 onready var health_bar = $HealthBar/TextureProgress
 onready var heat_bar = $HeatBar/TextureProgress
@@ -8,8 +8,8 @@ var animated_heat = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var hero_max_health = $"../Hero".max_health
-	var hero_max_heat = $"../Hero".max_heat
+	var hero_max_health = $"../ClassicGame/Hero".max_health
+	var hero_max_heat = $"../ClassicGame/Hero".max_heat
 	health_bar.max_value = hero_max_health
 	health_bar.max_value = hero_max_heat
 	update_health(hero_max_health)

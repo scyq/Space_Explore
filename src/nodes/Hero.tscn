@@ -6,8 +6,8 @@
 [ext_resource path="res://src/scripts/Hero.gd" type="Script" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 23.5984
-height = 2.76413
+radius = 9.4366
+height = 0.0
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -55,7 +55,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.00320411, 0.0316696 )
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 8 )
 animation = "0_speedup"
 
@@ -63,5 +63,12 @@ animation = "0_speedup"
 stream = ExtResource( 2 )
 
 [node name="Push" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0.211121, 17.418 )
+position = Vector2( 0.0350269, 6.05972 )
 emitting = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0.140388, 0.341705 )
+rotating = true
+current = true
+zoom = Vector2( 0.3, 0.3 )
+process_mode = 0
