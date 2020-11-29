@@ -59,8 +59,10 @@ func _physics_process(delta):
 	get_input()
 	if velocity.length() > 0:
 		$AnimatedSprite.play("0_speedup")
+		$Push.emitting = true
 	else:
 		$AnimatedSprite.play("0_speeddown")
+		$Push.emitting = false
 	rotation += rotation_dir * rotation_speed * delta
 	velocity = move_and_slide(velocity)
 	if position.x < 0:

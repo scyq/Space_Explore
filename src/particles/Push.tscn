@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.6, 0.785185, 0.807407, 0.903704, 0.92963 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.608954, 0.950829, 0.966698, 1, 1, 0.544278, 0, 1, 0.0875596, 0.885268, 0.922295, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 1
+emission_sphere_radius = 2.5
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 3 )
+
+[node name="Push" type="Particles2D"]
+amount = 50
+randomness = 0.8
+process_material = SubResource( 1 )
